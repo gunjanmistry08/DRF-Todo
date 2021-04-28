@@ -6,9 +6,8 @@ const TodoList = () => {
   return (
     <VStack
       divider={<StackDivider />}
-      borderColor="gray.100"
+      borderColor="gray.700"
       borderWidth="2px"
-      borderColor="gray.100"
       p="4"
       borderRadius="lg"
       w="100%"
