@@ -3,12 +3,14 @@ import { Input } from "@chakra-ui/input";
 import { Stack } from "@chakra-ui/layout";
 import { useState } from "react";
 
-const AddTodo = () => {
+const AddTodo = ({ addtodo }) => {
   const [content, setcontent] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(content);
+    addtodo(content);
+    setcontent("");
   };
 
   return (

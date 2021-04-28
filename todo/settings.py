@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
     "api.apps.ApiConfig",
     "rest_framework",
-    'corsheader',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080",
+    "http://localhost:3000",
 ]
 
 # Internationalization

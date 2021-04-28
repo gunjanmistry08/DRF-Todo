@@ -3,19 +3,15 @@ import { Spacer, Text } from "@chakra-ui/layout";
 import { HStack } from "@chakra-ui/layout";
 import { FaTrash } from "react-icons/fa";
 
-const Todo = () => {
-  const deleteTodo = (id) => {
-    console.log(id);
-  };
-
+const Todo = ({ todo, deleteTodo }) => {
   return (
     <HStack>
-      <Text>Example</Text>
+      <Text>{todo.title}</Text>
       <Spacer />
       <IconButton
         icon={<FaTrash />}
         isRound="true"
-        onClick={() => deleteTodo(4)}
+        onClick={() => deleteTodo(todo.id)}
       />
     </HStack>
   );

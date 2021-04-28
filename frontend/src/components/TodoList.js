@@ -1,12 +1,20 @@
 import { StackDivider } from "@chakra-ui/layout";
+import { Badge } from "@chakra-ui/layout";
 import { VStack } from "@chakra-ui/layout";
 import Todo from "./Todo";
 
-const TodoList = () => {
+const TodoList = ({ todos, deleteTodo }) => {
+  if (todos.length < 1) {
+    return (
+      <Badge colorScheme="green" p="4" m="4" borderRadius="lg">
+        No Todos, yay!!!
+      </Badge>
+    );
+  }
   return (
     <VStack
       divider={<StackDivider />}
-      borderColor="gray.700"
+      borderColor="blue.700"
       borderWidth="2px"
       p="4"
       borderRadius="lg"
@@ -14,7 +22,9 @@ const TodoList = () => {
       maxW={{ base: "90vw", sm: "80vw", lg: "50vw", xl: "20vw" }}
       alignItems="stretch"
     >
-      <Todo />
+      {todos.map((todo) => {
+        return <Todo key={todo.id} todo={todo} deleteTodo={deleteTodo} />;
+      })}
     </VStack>
   );
 };
