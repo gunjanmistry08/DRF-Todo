@@ -4,11 +4,11 @@ import { FaMoon, FaSun } from "react-icons/fa";
 const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <HStack m={24} alignItems={"center"}>
+    <HStack m={20} alignItems={"center"}>
       <Heading
         fontWeight="extrabold"
         size="2xl"
-        bgGradient="linear(to-r, pink.500, pink.300, blue.500)"
+        bgGradient="linear(to-r, blue.500, blue.300, pink.500)"
         bgClip="text"
       >
         Todo App

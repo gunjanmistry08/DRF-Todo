@@ -20,7 +20,7 @@ const AddTodo = () => {
           value={content}
           onChange={(e) => setcontent(e.target.value)}
         />
-        <Button colorScheme="pink" p={4} type="submit">
+        <Button colorScheme="blue" p={4} type="submit">
           Add Todo
         </Button>
       </Stack>
